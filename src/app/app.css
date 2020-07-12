@@ -1,0 +1,77 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0px; padding: 0px;
+  overflow: hidden;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace, "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  background-color: #333;
+  color: #ddd;
+}
+
+* {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace, "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  box-sizing: border-box;
+}
+
+.w_f {
+  width: 100%;
+}
+
+.w_8p {
+  width: 80%;
+}
+
+.mw_600 {
+  max-width: 600px;
+}
+
+.h_f {
+  height: 100%;
+}
+
+.d_f {
+  display: flex;
+}
+
+.d_b {
+  display: block;
+}
+
+.fg_1 {
+  flex-grow: 1;
+}
+
+.fj_center {
+  justify-content: center;
+}
+
+.fa_center {
+  align-items: center;
+}
+
+.fd_col {
+  flex-direction: column;
+}
+
+.f_24 {
+  font-size: 24px;
+  line-height: 2em;
+}
+.m_0 {
+  margin: 0px;
+}
+.mr_10 {
+  margin-right: 10px;
+}
+
+.p_10 {
+  padding: 10px;
+}
+
+.mb_10 {
+  margin-bottom: 10px;
+}
+.mt_10 {
+  margin-top: 10px;
+}
