@@ -8,7 +8,20 @@ function docReady(fn) {
   }
 }
 
+function handleNewLink () {
+  const floating_nav = document.querySelector('#floating_nav')
+  if (floating_nav) {
+    floating_nav.addEventListener('mouseenter', () => {
+      floating_nav.classList.remove('nav_closed')
+    })
+    floating_nav.addEventListener('mouseleave', () => {
+      floating_nav.classList.add('nav_closed')
+    })
+  }
+}
+
 docReady(function () {
+  handleNewLink()
   const _iframe = document.querySelector('iframe')
   const _path = _iframe.getAttribute('path')
   const _url = _iframe.getAttribute('url')
@@ -23,12 +36,14 @@ docReady(function () {
           lastTimeStamp = timestamp
         } else {
           if (lastTimeStamp != timestamp) {
-            console.log('reload')
+            document.title = 'Reloading...'
+            setTimeout(() => {
+              document.title = 'PHP Live Reloader'
+            }, 500)
             _iframe.src = _iframe.src
             lastTimeStamp = timestamp
           }
         }
       })
-  }, _interval * 1000);
-  console.log({_path, _url, _api, _interval})
+  }, _interval * 1000)
 });
