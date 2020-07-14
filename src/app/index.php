@@ -10,8 +10,16 @@
   <title>PHP Live Reloader</title>
 </head>
 <body>
-  <?php if($devUrl) { ?>
-    <iframe class="w_f h_f d_b" src="<?php echo $devUrl; ?>" frameborder="0"></iframe>
+  <?php if($devUrl && $projectPath) { ?>
+    <iframe 
+      class="w_f h_f d_b" 
+      src="<?php echo $devUrl; ?>" 
+      frameborder="0"
+      path="<?php echo $projectPath; ?>"
+      url="<?php echo $devUrl; ?>"
+      api="<?php echo "http://$_host:$_port/api.php"; ?>"
+      interval="<?php echo $env['interval']; ?>"
+    ></iframe>
   <?php } else { ?>
     <div class="w_f h_f d_f fj_center fa_center">
       <div class="w_8p mw_600 fd_col">
