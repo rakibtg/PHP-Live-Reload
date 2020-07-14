@@ -11,6 +11,16 @@
 </head>
 <body>
   <?php if($devUrl && $projectPath) { ?>
+    <div class="d_f w_f fa_center nav_closed" id="floating_nav">
+      <div class="p_10">
+        <a class="cl_444 p_10 no_td" href="/">+ New</a>
+      </div>
+      <form class="d_f fg_1 p_10" action="/" method="get">
+        <input class="p_10 fg_1 mr_10 mw_600" onClick="this.select();" type="text" name="url" placeholder="http://localhost" value="<?php echo $devUrl; ?>">
+        <input class="p_10 d_h" type="text" name="path" placeholder="/users/project/blog" value="<?php echo $projectPath; ?>">
+        <input class="p_10" type="submit" value="Update">
+      </form>
+    </div>
     <iframe 
       class="w_f h_f d_b" 
       src="<?php echo $devUrl; ?>" 
