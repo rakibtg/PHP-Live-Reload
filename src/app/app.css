@@ -5,6 +5,7 @@ html, body {
   overflow: hidden;
   font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace, "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
+  position: relative;
 }
 
 * {
@@ -72,4 +73,29 @@ html, body {
 }
 .mt_10 {
   margin-top: 10px;
+}
+
+.d_h {
+  display: none;
+}
+
+.cl_444 {
+  color: #444;
+}
+
+.no_td {
+  text-decoration: none;
+}
+
+#floating_nav {
+  position: absolute;
+  background-color: #fff;
+  padding-bottom: 20px;
+  top: 0; left: 0; right: 0;
+  border-bottom: 1px solid #888;
+}
+
+.nav_closed {
+  margin-top: -70px;
+  opacity: 0;
 }
